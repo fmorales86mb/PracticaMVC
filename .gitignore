@@ -1,0 +1,12 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/PracticaMVC/.vs/PracticaMVC/DesignTimeBuild
+/PracticaMVC/.vs/PracticaMVC/v16/Server/sqlite3
+/PracticaMVC/.vs/PracticaMVC/v16
+/PracticaMVC/ConsoleApp/obj/Debug
+/PracticaMVC/CulturaResourceAccess/obj
+/PracticaMVC/DataTransferObject/obj
+/PracticaMVC/DTOs/obj
+/PracticaMVC/Interfaces/obj

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{A4D31D7B-2168-4F9E-BEC9-64526EBAA920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_ResourceAccess", "01_ResourceAccess", "{65D9F39A-343E-4A62-8323-8CB64E1BC36E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Business", "02_Business", "{E7FA4404-326E-4BD7-B445-6ECACF6D09DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Entities", "03_Entities", "{4D0DA23B-1C47-4364-940D-9284979EF44C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_Middleware", "04_Middleware", "{CABF0EB9-611E-4714-AF96-372D07BDCB4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_UserInterface", "05_UserInterface", "{BF61FA5C-02DD-4E8F-9437-A75CDBEDEB2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CulturaResourceAccess", "CulturaResourceAccess\CulturaResourceAccess.csproj", "{C4EA2EB8-7EAC-4AD8-B6EE-CB6438D94FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{EFD18397-7631-40D1-ACC8-E0A01F30A8EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "DTOs\DTOs.csproj", "{4E816CE9-7001-4B21-A832-11F1EEC612C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4D31D7B-2168-4F9E-BEC9-64526EBAA920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D31D7B-2168-4F9E-BEC9-64526EBAA920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D31D7B-2168-4F9E-BEC9-64526EBAA920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D31D7B-2168-4F9E-BEC9-64526EBAA920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4EA2EB8-7EAC-4AD8-B6EE-CB6438D94FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4EA2EB8-7EAC-4AD8-B6EE-CB6438D94FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4EA2EB8-7EAC-4AD8-B6EE-CB6438D94FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4EA2EB8-7EAC-4AD8-B6EE-CB6438D94FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD18397-7631-40D1-ACC8-E0A01F30A8EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD18397-7631-40D1-ACC8-E0A01F30A8EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD18397-7631-40D1-ACC8-E0A01F30A8EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD18397-7631-40D1-ACC8-E0A01F30A8EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E816CE9-7001-4B21-A832-11F1EEC612C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E816CE9-7001-4B21-A832-11F1EEC612C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E816CE9-7001-4B21-A832-11F1EEC612C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E816CE9-7001-4B21-A832-11F1EEC612C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4EA2EB8-7EAC-4AD8-B6EE-CB6438D94FAA} = {65D9F39A-343E-4A62-8323-8CB64E1BC36E}
+		{EFD18397-7631-40D1-ACC8-E0A01F30A8EB} = {65D9F39A-343E-4A62-8323-8CB64E1BC36E}
+		{4E816CE9-7001-4B21-A832-11F1EEC612C4} = {65D9F39A-343E-4A62-8323-8CB64E1BC36E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CC5BBB9-B63D-41D7-8BC9-DA71FBC50C22}
+	EndGlobalSection
+EndGlobal
