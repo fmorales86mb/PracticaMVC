@@ -1,17 +1,31 @@
-﻿using CulturaResourceAccessa;
+﻿using ResourceAccess.Cultura;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApp
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            CulturaResourceAccess cultura = new CulturaResourceAccess();
+            Pruebas prueba = new Pruebas();
+            string resultado;
+
+            resultado = await prueba.ConsumoService();
+
+            Console.WriteLine(resultado);
+            Console.ReadKey();
         }
+
+        public class Pruebas
+        {
+            public async Task<string> ConsumoService()
+            {
+                CulturaServices cultura = new CulturaServices();
+                var result = await cultura.GetMuseosAsync();
+                return result.results[1].nombre;
+            }
+        }
+        
     }
 }

@@ -10,3 +10,15 @@
 /PracticaMVC/DataTransferObject/obj
 /PracticaMVC/DTOs/obj
 /PracticaMVC/Interfaces/obj
+/PracticaMVC/ConsoleApp/bin/Debug
+/PracticaMVC/CulturaBusiness/obj/Debug
+/PracticaMVC/CulturaResourceAccess/bin/Debug/netstandard2.0
+/PracticaMVC/DTOs/bin/Debug/netstandard2.0
+/PracticaMVC/Interfaces/bin/Debug/netstandard2.0
+/PracticaMVC/packages
+/PracticaMVC/ResourceAccess.Cultura/bin/Debug
+/PracticaMVC/ResourceAccess.Cultura/obj/Debug
+/PracticaMVC/ResourceAccess.DTOs/bin/Debug
+/PracticaMVC/ResourceAccess.DTOs/obj/Debug
+/PracticaMVC/ResourceAccess.Interfaces/bin/Debug
+/PracticaMVC/ResourceAccess.Interfaces/obj/Debug
