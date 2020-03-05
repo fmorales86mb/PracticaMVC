@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace ResourceAccess.Interfaces
 {
-    public interface ICulturaServices
+    public interface ICulturaResourceAccess
     {
         Task<ResponseMuseosDTO> GetMuseosAsync();
     }

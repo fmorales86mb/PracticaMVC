@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ResourceAccess.Cultura
 {
-    public class CulturaServices : ICulturaServices
+    public class CulturaResourceAccess : ICulturaResourceAccess
     {
         #region Atributtes
 
@@ -18,7 +18,7 @@ namespace ResourceAccess.Cultura
 
         #region Constructor
 
-        public CulturaServices()
+        public CulturaResourceAccess()
         {
             this.InicializarClient();
         }

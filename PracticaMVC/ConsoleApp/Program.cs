@@ -21,7 +21,7 @@ namespace ConsoleApp
         {
             public async Task<string> ConsumoService()
             {
-                CulturaServices cultura = new CulturaServices();
+                CulturaResourceAccess cultura = new CulturaResourceAccess();
                 var result = await cultura.GetMuseosAsync();
                 return result.results[1].nombre;
             }
