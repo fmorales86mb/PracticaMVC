@@ -1,6 +1,5 @@
 ﻿using Entities.Cultura;
 using Business.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ResourceAccess.Interfaces;
@@ -11,7 +10,7 @@ namespace Business.Cutura
     {
         #region Atributtes
 
-        private ICulturaResourceAccess culturaResourceAccess;
+        private ICulturaResourceAccess culturaResourceAccess;                
 
         #endregion
 
@@ -19,7 +18,7 @@ namespace Business.Cutura
 
         public CulturaBusiness(ICulturaResourceAccess culturaResourceAccess)
         {
-            this.culturaResourceAccess = culturaResourceAccess;
+            this.culturaResourceAccess = culturaResourceAccess;            
         }
 
         #endregion
@@ -28,9 +27,9 @@ namespace Business.Cutura
 
         public async Task<List<MuseoEntity>> GetMuseosAsync()
         {
-            var prueba = await this.culturaResourceAccess.GetMuseosAsync();
+            var museos = await this.culturaResourceAccess.GetMuseosAsync();
 
-            return new List<MuseoEntity>();
+            return museos;
         }
 
         #endregion

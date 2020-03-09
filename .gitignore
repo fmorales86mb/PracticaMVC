@@ -32,3 +32,6 @@
 /PracticaMVC/MvcAplication/obj/Debug
 /PracticaMVC/WebApiMiddleware/bin
 /PracticaMVC/WebApiMiddleware/obj/Debug
+/.vs
+/PracticaMVC/ResourceAccess.Cultura/obj/Release
+*.cache

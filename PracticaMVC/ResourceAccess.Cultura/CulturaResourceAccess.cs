@@ -1,6 +1,9 @@
-﻿using ResourceAccess.DTOs.CulturaDTOs;
+﻿using AutoMapper;
+using Entities.Cultura;
+using ResourceAccess.DTOs.CulturaDTOs;
 using ResourceAccess.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -12,6 +15,7 @@ namespace ResourceAccess.Cultura
         #region Atributtes
 
         private HttpClient client;
+        private IMapper mapper;
         const string urlBase = "https://www.cultura.gob.ar/api/v2.0/";
 
         #endregion
@@ -21,15 +25,17 @@ namespace ResourceAccess.Cultura
         public CulturaResourceAccess()
         {
             this.InicializarClient();
+            this.mapper = MappingConfig.RegisterComponents().CreateMapper();
         }
 
         #endregion
 
         #region Public Methods
 
-        public async Task<ResponseMuseosDTO> GetMuseosAsync()
+        public async Task<List<MuseoEntity>> GetMuseosAsync()
         {
-            ResponseMuseosDTO museos = new ResponseMuseosDTO();
+            ResponseMuseosDTO data = new ResponseMuseosDTO();
+            List<MuseoEntity> museos = new List<MuseoEntity>();
             string uri = "museos";
             
             HttpResponseMessage response = await client.GetAsync(uri);
@@ -37,7 +43,8 @@ namespace ResourceAccess.Cultura
             if (response.IsSuccessStatusCode)
             {
                 // Para GetAsAsync se debe instalar Microsoft.AspNet.WebApi.Client
-                museos = await response.Content.ReadAsAsync<ResponseMuseosDTO>();
+                data = await response.Content.ReadAsAsync<ResponseMuseosDTO>();
+                museos = this.mapper.Map<List<MuseoEntity>>(data.results);
             }                        
 
             return museos;

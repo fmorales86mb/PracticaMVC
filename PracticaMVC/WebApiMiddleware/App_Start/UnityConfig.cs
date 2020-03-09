@@ -21,6 +21,7 @@ namespace WebApiMiddleware
 
             container.RegisterType<ICulturaResourceAccess, CulturaResourceAccess>();
             container.RegisterType<ICulturaBusiness, CulturaBusiness>();
+            
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

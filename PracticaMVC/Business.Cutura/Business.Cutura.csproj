@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +56,10 @@
       <Project>{a72a10e7-57b6-404d-8c7d-579c2240ace9}</Project>
       <Name>Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ResourceAccess.Cultura\ResourceAccess.Cultura.csproj">
+      <Project>{01986BB8-E90C-4F8C-991E-189191838009}</Project>
+      <Name>ResourceAccess.Cultura</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ResourceAccess.DTOs\ResourceAccess.DTOs.csproj">
       <Project>{00D62A46-1663-4D68-A5AD-DF1772BEE498}</Project>
       <Name>ResourceAccess.DTOs</Name>
@@ -61,6 +68,9 @@
       <Project>{69AA531F-9BD7-48EA-B9DC-90FE8638C1F2}</Project>
       <Name>ResourceAccess.Interfaces</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
