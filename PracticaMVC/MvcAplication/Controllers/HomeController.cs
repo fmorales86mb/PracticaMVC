@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MvcAplication.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,8 +11,15 @@ namespace MvcAplication.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Listado = this.GetMocks(6);
             return View();
         }
+
+        //public ActionResult TableView()
+        //{
+
+        //    return View();
+        //}
 
         public ActionResult About()
         {
@@ -26,5 +34,24 @@ namespace MvcAplication.Controllers
 
             return View();
         }
+
+        private List<MuseoViewModel> GetMocks(int cant)
+        {
+            List<MuseoViewModel> lista = new List<MuseoViewModel>();
+
+            for(int i = 1; i<= cant; i++)
+            {
+                MuseoViewModel model = new MuseoViewModel()
+                {
+                    Id = i.ToString(),
+                    Nombre = string.Format("Nombre{0}", i.ToString())
+                };
+
+                lista.Add(model);
+            }
+
+            return lista;
+        }
+
     }
 }
