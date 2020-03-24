@@ -21,7 +21,9 @@ namespace WebApiMiddleware
 
             container.RegisterType<ICulturaResourceAccess, CulturaResourceAccess>();
             container.RegisterType<ICulturaBusiness, CulturaBusiness>();
-            
+            /*
+             * Para que Unity funcione en los controllers hay que agregar en el Global.asax: UnityConfig.RegisterComponents()
+            */
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

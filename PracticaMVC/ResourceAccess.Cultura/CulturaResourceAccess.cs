@@ -34,19 +34,27 @@ namespace ResourceAccess.Cultura
 
         public async Task<List<MuseoEntity>> GetMuseosAsync()
         {
-            ResponseMuseosDTO data = new ResponseMuseosDTO();
+            ResponseMuseosDTO data;
             List<MuseoEntity> museos = new List<MuseoEntity>();
             string uri = "museos";
-            
-            HttpResponseMessage response = await client.GetAsync(uri);
 
-            if (response.IsSuccessStatusCode)
+            try
             {
-                // Para GetAsAsync se debe instalar Microsoft.AspNet.WebApi.Client
-                data = await response.Content.ReadAsAsync<ResponseMuseosDTO>();
-                museos = this.mapper.Map<List<MuseoEntity>>(data.results);
-            }                        
+                HttpResponseMessage response = await client.GetAsync(uri);
 
+                if (response.IsSuccessStatusCode)
+                {
+                    // Para GetAsAsync se debe instalar Microsoft.AspNet.WebApi.Client
+                    data = await response.Content.ReadAsAsync<ResponseMuseosDTO>();
+                    museos = this.mapper.Map<List<MuseoEntity>>(data.results);
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+                           
             return museos;
         }
 

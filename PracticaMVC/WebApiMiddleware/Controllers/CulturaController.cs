@@ -1,11 +1,8 @@
 ﻿using Business.Interfaces;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Entities.Cultura;
 
 namespace WebApiMiddleware.Controllers
 {
@@ -30,9 +27,10 @@ namespace WebApiMiddleware.Controllers
         
         [HttpGet]
         [Route("api/getmuseos")]
-        public async Task GetMuseosAsync()
+        public async Task<List<MuseoEntity>> GetMuseosAsync()
         {
-            var prueba = await this.culturaBusiness.GetMuseosAsync();
+            var museos = await this.culturaBusiness.GetMuseosAsync();
+            return museos;
         }
 
         #endregion
